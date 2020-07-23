@@ -17,6 +17,10 @@ To build the container just run the following command
 
 `docker build -t tunnel-docker .`
 
+or you can donwloading in docker hub with:
+
+`docker pull obedaeg/docker-tunnel`
+
 Then we run the container
 
 `docker run -it --volume={path_to_your_keyfile}:{keyfile} -e "LOCAL_PORT={PORT}" -e "FORWARD_HOST={FHOST}" -e "FORWARD_PORT={FPORT}" -e "KEYFILE={KEYFILE}" -e "TUNNEL_USER={USER}" -e "TUNNEL_HOST={HOST}" -p {PORT}:{PORT} --rm tunnel-docker`
